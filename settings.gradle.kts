@@ -19,5 +19,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Todo - MVVM"
+rootProject.name = "Task Trek"
 include(":app")

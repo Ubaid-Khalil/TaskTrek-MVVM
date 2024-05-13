@@ -1,4 +1,4 @@
-package com.todo.mvvm
+package com.ubaid.khalil.todo.mvvm
 
 import org.junit.Test
 

@@ -2,4 +2,18 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <color name="primary">#FF15E6D1</color>
+    <color name="background">#EAFDFB</color>
+    <color name="secondary_background">#FDF1DB</color>
+    <color name="secondary">#FFFD4E53</color>
+    <color name="on_surface">#042B3C</color>
+    <color name="on_secondary_surface">#911227</color>
+
+    <integer-array name="loading_color">
+        <item>@color/primary</item>
+        <item>@color/on_surface</item>
+        <item>@color/on_secondary_surface</item>
+        <item>@color/secondary</item>
+    </integer-array>
 </resources>
