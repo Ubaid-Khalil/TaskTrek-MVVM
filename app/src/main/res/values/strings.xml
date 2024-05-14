@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Task Trek</string>
+    <string name="add_task">Add Task</string>
+    <string name="no_tasks_found">No tasks found!</string>
+    <string name="loading">Loading..</string>
+    <string name="task">Task</string>
+    <string name="description">Description</string>
+    <string name="important_task">Important Task</string>
+    <string name="completed_task">Completed Task</string>
 </resources>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".ui.addupdatetask.AddUpdateTaskFragment">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:orientation="vertical"
+        android:padding="@dimen/_10sdp">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="@dimen/_5sdp"
+            app:strokeWidth="0dp">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/acet_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:hint="@string/task"
+                android:lines="1"
+                android:maxLines="1"
+                android:padding="@dimen/_7sdp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_16sdp" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            app:cardCornerRadius="@dimen/_5sdp"
+            app:strokeWidth="0dp">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/acet_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:gravity="top|start"
+                android:hint="@string/description"
+                android:lines="7"
+                android:maxLines="7"
+                android:padding="@dimen/_7sdp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_14sdp" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/accb_important"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                android:padding="@dimen/_10sdp"
+                android:text="@string/important_task" />
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/accb_completed"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_weight="1"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                android:padding="@dimen/_10sdp"
+                android:text="@string/completed_task" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/actv_date_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:includeFontPadding="false"
+            android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sdp"
+            android:visibility="gone"
+            tools:text="2024-05-13 11:00 Pm"
+            tools:visibility="visible" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_add_update_task"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/_20sdp"
+        android:backgroundTint="@color/on_surface"
+        android:contentDescription="@string/add_task"
+        android:src="@drawable/ic_add"
+        app:tint="@color/white" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

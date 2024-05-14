@@ -18,5 +18,14 @@
         android:id="@+id/tasksFragment"
         android:name="com.ubaid.khalil.todo.mvvm.ui.tasks.TasksFragment"
         android:label="fragment_tasks"
-        tools:layout="@layout/fragment_tasks" />
+        tools:layout="@layout/fragment_tasks" >
+        <action
+            android:id="@+id/action_tasksFragment_to_addUpdateTaskFragment"
+            app:destination="@id/addUpdateTaskFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addUpdateTaskFragment"
+        android:name="com.ubaid.khalil.todo.mvvm.ui.addupdatetask.AddUpdateTaskFragment"
+        android:label="fragment_add_update_task"
+        tools:layout="@layout/fragment_add_update_task" />
 </navigation>

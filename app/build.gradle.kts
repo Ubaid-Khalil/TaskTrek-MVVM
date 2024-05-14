@@ -4,6 +4,7 @@ plugins {
     alias(libs.plugins.ksp)
     alias(libs.plugins.dagger.hilt)
     alias(libs.plugins.navigation.safeargs)
+    id("kotlin-parcelize")
 }
 
 android {
@@ -66,4 +67,7 @@ dependencies {
     // Navigation dependencies
     implementation(libs.androidx.navigation.fragment.ktx)
     implementation(libs.androidx.navigation.ui.ktx)
+
+    // Lottie animation dependency
+    implementation("com.airbnb.android:lottie:3.7.0")
 }
