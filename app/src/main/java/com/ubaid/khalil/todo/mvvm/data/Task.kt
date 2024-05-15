@@ -13,11 +13,11 @@ data class Task(
     @PrimaryKey(autoGenerate = true)
     val id: Int = 0,
     val title: String,
-    val description: String,
+    val description: String = "",
     @ColumnInfo(name = "is_important")
-    val isImportant: Boolean = false,
+    val isImportant: Int = 0,
     @ColumnInfo(name = "is_completed")
-    val isCompleted: Boolean = false,
+    val isCompleted: Int = 0,
     val created: Long = System.currentTimeMillis()
 ) : Parcelable {
     val dateFormatted: String

@@ -69,5 +69,5 @@ dependencies {
     implementation(libs.androidx.navigation.ui.ktx)
 
     // Lottie animation dependency
-    implementation("com.airbnb.android:lottie:3.7.0")
+    implementation(libs.lottie)
 }
