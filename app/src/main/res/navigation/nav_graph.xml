@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/splashFragment"
-        android:name="com.ubaid.khalil.todo.mvvm.ui.splash.SplashFragment"
+        android:name="com.ubaid.khalil.todo.mvvm.tasktrek.ui.splash.SplashFragment"
         android:label="fragment_splash"
         tools:layout="@layout/fragment_splash" >
         <action
@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/tasksFragment"
-        android:name="com.ubaid.khalil.todo.mvvm.ui.tasks.TasksFragment"
+        android:name="com.ubaid.khalil.todo.mvvm.tasktrek.ui.tasks.TasksFragment"
         android:label="fragment_tasks"
         tools:layout="@layout/fragment_tasks" >
         <action
@@ -25,7 +25,7 @@
     </fragment>
     <fragment
         android:id="@+id/addUpdateTaskFragment"
-        android:name="com.ubaid.khalil.todo.mvvm.ui.addupdatetask.AddUpdateTaskFragment"
+        android:name="com.ubaid.khalil.todo.mvvm.tasktrek.ui.addupdatetask.AddUpdateTaskFragment"
         android:label="fragment_add_update_task"
         tools:layout="@layout/fragment_add_update_task" />
 </navigation>

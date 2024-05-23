@@ -1,4 +1,4 @@
-package com.ubaid.khalil.todo.mvvm.ui.splash
+package com.ubaid.khalil.todo.mvvm.tasktrek.ui.splash
 
 import android.content.Context
 import android.os.Bundle
@@ -7,11 +7,11 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
-import com.ubaid.khalil.todo.mvvm.R
-import com.ubaid.khalil.todo.mvvm.databinding.FragmentSplashBinding
-import com.ubaid.khalil.todo.mvvm.utils.navigateToFragment
-import com.ubaid.khalil.todo.mvvm.utils.setNavigationBarColour
-import com.ubaid.khalil.todo.mvvm.utils.setStatusBarColour
+import com.ubaid.khalil.todo.mvvm.tasktrek.R
+import com.ubaid.khalil.todo.mvvm.tasktrek.databinding.FragmentSplashBinding
+import com.ubaid.khalil.todo.mvvm.tasktrek.utils.navigateToFragment
+import com.ubaid.khalil.todo.mvvm.tasktrek.utils.setNavigationBarColour
+import com.ubaid.khalil.todo.mvvm.tasktrek.utils.setStatusBarColour
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
@@ -31,7 +31,7 @@ class SplashFragment : Fragment(R.layout.fragment_splash) {
         binding = FragmentSplashBinding.bind(view)
 
         setupViews()
-        navigate()
+        startTransition()
     }
 
     private fun setupViews() {
@@ -47,7 +47,7 @@ class SplashFragment : Fragment(R.layout.fragment_splash) {
         }
     }
 
-    private fun navigate() {
+    private fun startTransition() {
         lifecycleScope.launch {
             delay(3000)
             val direction = SplashFragmentDirections.actionSplashFragmentToTasksFragment()

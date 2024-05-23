@@ -1,24 +1,28 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
-    alias(libs.plugins.ksp)
-    alias(libs.plugins.dagger.hilt)
-    alias(libs.plugins.navigation.safeargs)
+    id("com.google.devtools.ksp")
     id("kotlin-parcelize")
+    id("androidx.navigation.safeargs.kotlin")
+    id("com.google.dagger.hilt.android")
 }
 
 android {
-    namespace = "com.ubaid.khalil.todo.mvvm"
+    namespace = "com.ubaid.khalil.todo.mvvm.tasktrek"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.ubaid.khalil.todo.mvvm"
+        applicationId = "com.ubaid.khalil.todo.mvvm.tasktrek"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
+        ksp {
+            arg("room.schemaLocation", "$projectDir/schemas")
+        }
     }
 
     buildTypes {
@@ -53,21 +57,34 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 
-    // Size dependency
-    implementation(libs.sdp.android)
+    // Hilt dependencies
+    val hiltVersion = "2.48.1"
+    implementation("com.google.dagger:hilt-android:$hiltVersion")
+    ksp("com.google.dagger:hilt-compiler:$hiltVersion")
 
     // Room dependencies
-    implementation(libs.androidx.room.runtime)
-    ksp(libs.androidx.room.compiler)
-
-    // Hilt dependencies
-    implementation(libs.hilt.android)
-    ksp(libs.hilt.android.compiler)
+    val roomVersion = "2.6.1"
+    implementation("androidx.room:room-runtime:$roomVersion")
+    implementation("androidx.room:room-ktx:$roomVersion")
+    ksp("androidx.room:room-compiler:$roomVersion")
 
     // Navigation dependencies
-    implementation(libs.androidx.navigation.fragment.ktx)
-    implementation(libs.androidx.navigation.ui.ktx)
+    val navigationVersion = "2.7.6"
+    implementation("androidx.navigation:navigation-fragment-ktx:$navigationVersion")
+    implementation("androidx.navigation:navigation-ui-ktx:$navigationVersion")
 
-    // Lottie animation dependency
-    implementation(libs.lottie)
+    // Lifecycle dependency
+    val lifecycleVersion = "2.6.2"
+    implementation("androidx.lifecycle:lifecycle-livedata-ktx:$lifecycleVersion")
+
+    // DataStore dependency
+    val dataStoreVersion = "1.0.0-alpha02"
+    implementation("androidx.datastore:datastore-preferences:$dataStoreVersion")
+
+    // Sdp dependency
+    val sdpVersion = "1.1.0"
+    implementation("com.intuit.sdp:sdp-android:$sdpVersion")
+
+    val lottieVersion = "6.0.0"
+    implementation("com.airbnb.android:lottie:$lottieVersion")
 }

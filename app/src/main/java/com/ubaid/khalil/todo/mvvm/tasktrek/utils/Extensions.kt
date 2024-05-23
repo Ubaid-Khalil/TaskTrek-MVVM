@@ -1,4 +1,4 @@
-package com.ubaid.khalil.todo.mvvm.utils
+package com.ubaid.khalil.todo.mvvm.tasktrek.utils
 
 import android.app.Activity
 import android.view.WindowManager

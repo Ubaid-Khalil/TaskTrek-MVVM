@@ -1,4 +1,4 @@
-package com.ubaid.khalil.todo.mvvm
+package com.ubaid.khalil.todo.mvvm.tasktrek
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
@@ -19,6 +19,6 @@ class ExampleInstrumentedTest {
     fun useAppContext() {
         // Context of the app under test.
         val appContext = InstrumentationRegistry.getInstrumentation().targetContext
-        assertEquals("com.todo.mvvm", appContext.packageName)
+        assertEquals("com.ubaid.khalil.todo.mvvm.tasktrek", appContext.packageName)
     }
 }
