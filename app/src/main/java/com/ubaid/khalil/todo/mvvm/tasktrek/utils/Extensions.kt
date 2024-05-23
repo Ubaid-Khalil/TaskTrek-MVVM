@@ -20,7 +20,7 @@ fun Activity.setStatusBarColour(@ColorInt color: Int, isColorLight: Boolean) {
 fun Activity.setNavigationBarColour(@ColorInt color: Int, isColorLight: Boolean) {
     window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
     window.navigationBarColor = color
-    WindowCompat.getInsetsController(window, window.decorView).isAppearanceLightStatusBars =
+    WindowCompat.getInsetsController(window, window.decorView).isAppearanceLightNavigationBars =
         isColorLight
 }
 
